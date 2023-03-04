@@ -2,13 +2,21 @@ package main
 
 import (
 	"fmt"
+	"github.com/atotto/clipboard"
 	"os"
 	"strings"
 )
 
 func main() {
-	args := os.Args[1:]
+	args, err := clipboard.ReadAll()
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 	fmt.Println(args)
+
+	// convert args to string
+	args = strings.Split(args, " ")[0]
 
 	if len(args) == 0 {
 		fmt.Println("Please enter a Google Drive link!")
