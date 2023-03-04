@@ -25,4 +25,5 @@ func main() {
 	}
 	final = "https://drive.google.com/uc?id=" + enter
 	fmt.Println(final)
+	clipboard.WriteAll(final)
 }
