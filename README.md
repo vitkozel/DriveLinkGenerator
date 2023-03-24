@@ -1,5 +1,5 @@
 # DriveLinkGenerator
-Generate raw files links from Google Drive content.
+Generate raw file links from Google Drive content.
 
 ## Installation
 
